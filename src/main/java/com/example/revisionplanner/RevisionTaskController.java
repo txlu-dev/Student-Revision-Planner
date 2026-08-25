@@ -36,6 +36,17 @@ public class RevisionTaskController {
 
         return repository.save(task);
     }
+    
+    @PutMapping("/{id}/complete")
+    public RevisionTask completeTask(@PathVariable int id) {
+
+        RevisionTask task = repository.findById(id)
+                .orElseThrow();
+
+        task.markComplete();
+
+        return repository.save(task);
+    }
 
     @DeleteMapping("/{id}")
     public void deleteTask(@PathVariable int id) {

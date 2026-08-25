@@ -34,3 +34,6 @@ bin/
 
 # macOS
 .DS_Store
+
+# Spring Boot
+src/main/resources/application.properties

@@ -45,7 +45,7 @@ public class RevisionTask {
     }
 
     // Returns the completion state
-    public boolean getComplete() {
+    public boolean isCompleted() {
         return completed;
     }
 }
